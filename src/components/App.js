@@ -1,18 +1,25 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-class App extends Component {
-    constructor(props) {
-		super(props);
-	};
 
-    render() {
+ const App = () => {
+
+
+    let [start,setStart]=useState(false);
+
+	function hi(){
+		setStart(true);
+	}
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
+				<button id="click" onClick={hi} >click me</button>
+				{start?<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes
+          me so happy</p>:null}
+				
     		</div>
     	);
-    }
+    
 }
 
 
